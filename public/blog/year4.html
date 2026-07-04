@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Year 4 — Chapters by Naman Kaur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+  <!-- Reading progress bar — fills as you scroll the article -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">Chapters ✦</a>
+    <div class="nav-links">
+      <a href="../index.html#hero"     class="nav-link">home</a>
+      <a href="../index.html#timeline" class="nav-link">timeline</a>
+      <a href="../index.html#gallery"  class="nav-link">gallery</a>
+      <a href="../index.html#blog"     class="nav-link active">blog</a>
+      <a href="../index.html#connect"  class="nav-link">connect</a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="open menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html"          class="mobile-link">home</a>
+    <a href="../index.html#timeline" class="mobile-link">timeline</a>
+    <a href="../index.html#gallery"  class="mobile-link">gallery</a>
+    <a href="../index.html#blog"     class="mobile-link">blog</a>
+    <a href="../index.html#connect"  class="mobile-link">connect</a>
+  </div>
+
+  <!-- ===================== HERO BANNER ===================== -->
+  <div class="blog-hero">
+    <a href="../index.html#blog" class="blog-back">
+      <i class="ti ti-arrow-left"></i> Back to all posts
+    </a>
+    <span class="blog-year-badge">Year 4 · 2024–2025</span>
+    <h1>Building this site — what I learned about myself</h1>
+    <div class="blog-meta-row">
+      <span><i class="ti ti-calendar"></i> May 2025</span>
+      <span><i class="ti ti-clock"></i> 7 min read</span>
+      <span><i class="ti ti-tag"></i> reflection, fullstack, design</span>
+    </div>
+  </div>
+
+  <!-- ===================== ARTICLE ===================== -->
+  <article class="blog-body">
+
+    <p>
+      At the start of Year 4, my supervisor asked our batch what we were planning to do for our final year project. Most people said things like "a machine learning model" or "an e-commerce app." I said I wanted to build a website that documented my four years of college.
+    </p>
+
+    <p>
+      There was a pause. Someone asked if that was a technical enough project. I said I thought so. I wasn't entirely sure. I knew I wanted to build it. I figured the technical challenge would reveal itself once I started, and I was right — it revealed several challenges at once, none of which I had anticipated.
+    </p>
+
+    <blockquote>
+      "Every design decision felt personal. Because it was."
+    </blockquote>
+
+    <h2>Why this project, and why it was harder than I expected</h2>
+
+    <p>
+      I've built projects before — a habit tracker, a dashboard, a clone of a popular app to practice a framework. Those were technical exercises. The goal was to demonstrate that I could implement something. This was different. This was about me, and it turned out that building something about yourself is a completely different kind of hard.
+    </p>
+
+    <p>
+      When you're building a clone, there's a reference. You know what it should look like. There's a correct answer. When you're building something personal, every decision is yours — the structure, the tone, what to include, what to leave out, how honest to be. Technical decisions and creative decisions blur together constantly. Should the Year 1 section feel raw and messy? Should the footer feel conclusive or open-ended? Those are design questions. But they're also questions about how I want to represent myself to the world.
+    </p>
+
+    <h2>The design process — and why I did it on paper first</h2>
+
+    <p>
+      Before writing a single line of code, I spent a week just thinking about structure. Not in Figma, not even on a computer. On paper. Rough sketches of what each section should feel like, what the visitor's emotional journey should be — confusion and honesty at Year 1, momentum at Year 2, confidence at Year 4.
+    </p>
+
+    <p>
+      The colour palette came from a single question: what colour feels like growth without feeling corporate? Green. Not the sharp green of a brand, but something earthy. Forest green deep enough to feel grounded, with a lighter accent for energy. Cream backgrounds instead of white, because white is sterile and this project is supposed to feel alive.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>The single best design decision I made:</strong> using CSS custom properties (variables) for every colour and spacing value from day one. When I changed my mind about the accent green three weeks in, I changed one line in my stylesheet and the entire site updated. Without variables, that would have been an afternoon of find-and-replace.
+      </p>
+    </div>
+
+    <h2>The technical stack — and every wrong turn I took</h2>
+
+    <p>
+      I started with the intention of keeping it simple: plain HTML, CSS, and vanilla JavaScript. No framework. No build tool. Just files. This was a deliberate choice — I wanted the code itself to be readable by anyone looking at the source, not a compiled bundle that tells you nothing about how it was written.
+    </p>
+
+    <p>
+      That choice held for the frontend. For the backend, I used Node.js and Express, with blog posts stored as Markdown files that the server converts to HTML at request time. No database for content — just files, which are easier to write, easier to back up, and impossible to accidentally corrupt with a bad SQL query.
+    </p>
+
+    <p>
+      The wrong turns, in roughly chronological order:</p>
+    <ul>
+      <li><strong>I tried to animate everything at once.</strong> The early version had so many scroll animations that the page felt like it was performing rather than existing. I stripped about 70% of them out. The rule I settled on: animate to reveal, not to impress.</li>
+      <li><strong>I over-engineered the gallery filter.</strong> My first implementation rebuilt the entire DOM on every filter click. It worked but it was wasteful. The final version just toggles CSS classes. Simpler is almost always faster.</li>
+      <li><strong>I wrote the blogs last.</strong> This was the biggest mistake. The blogs are the most personal part of the site — they're the actual substance. Everything else is structure. I should have written them first and let them shape the design, not the other way around.</li>
+    </ul>
+
+    <h2>What JavaScript actually taught me — now that I can use it</h2>
+
+    <p>
+      In Year 2, JavaScript was something I was learning. In Year 4, building this site, it became something I was using — and the difference is enormous. When you're learning, every new concept feels like a hurdle. When you're using, concepts are just tools you reach for when you need them.
+    </p>
+
+    <p>
+      The things I used most on this project, ranked by how surprised I was that I needed them:
+    </p>
+
+    <ol>
+      <li><strong>IntersectionObserver</strong> — for scroll-reveal animations. Cleaner than listening to the scroll event for everything, and much better for performance.</li>
+      <li><strong>CSS transitions triggered by JS class changes</strong> — this pattern (JS adds a class, CSS handles the animation) is responsible for every interactive moment on this site. Understanding it deeply makes you fast.</li>
+      <li><strong>The <code>fetch</code> API</strong> — for loading blog content dynamically from the backend without page reloads.</li>
+      <li><strong>LocalStorage</strong> — for remembering which gallery filter the user had selected if they navigated away and came back. A small thing that makes the experience feel considered.</li>
+    </ol>
+
+    <h2>The backend — simpler than Year 3 me would have expected</h2>
+
+    <p>
+      The backend for this site does three things: serves the HTML files, serves the blog posts converted from Markdown to HTML, and handles a contact form submission. That's it. It doesn't need to do more. One of the most useful things I learned in Year 3 — and keep learning — is to build what's needed rather than what's impressive.
+    </p>
+
+    <p>
+      The server is about 80 lines of Express. The Markdown-to-HTML conversion uses a single library. The contact form sends an email via a free API. Boring, practical, and it works reliably. I'm more proud of this than any of the flashier technical things I've built.
+    </p>
+
+    <h2>What I learned about myself — the part that surprised me</h2>
+
+    <p>
+      I expected to learn technical things from this project. I did. I didn't expect to learn that I find writing hard in a way that coding isn't. Writing the blog posts — these four posts you're reading — took longer than building the entire frontend. Words resist you differently than code does. Code fails clearly and loudly. Writing fails quietly and you don't always notice.
+    </p>
+
+    <p>
+      I also learned that I care more about the experience of using something than I thought I did. I spent an unreasonable amount of time on things visitors might never consciously notice — the timing of the scroll animations, the exact weight of the border on the year cards, whether the typewriter effect felt too fast or too slow. I don't think that's wasted time. I think that's the difference between something that feels finished and something that feels considered.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        <strong>The most honest thing I can say about this project:</strong> it is not the most technically ambitious thing I could have built. It is the most completely mine. And I think that's worth more, especially at this particular moment — standing at the end of four years, looking for what comes next.
+      </p>
+    </div>
+
+    <h2>If I were starting this project again tomorrow</h2>
+
+    <ol>
+      <li>Write the content first. Let the design follow the words, not the other way around.</li>
+      <li>Decide on the colour palette in the first hour and don't revisit it unless something is genuinely broken.</li>
+      <li>Build mobile-first from day one. Retrofitting responsiveness at the end is painful.</li>
+      <li>Use CSS variables for everything. Future-you will be grateful.</li>
+      <li>Deploy early — even a half-finished version on a real URL. Seeing it in a browser on your phone, not just localhost on your laptop, changes what you notice.</li>
+    </ol>
+
+    <hr />
+
+    <p>
+      Four years, eight semesters, somewhere around 12,000 lines of code across every project I've ever built, and four blog posts I rewrote at least three times each. This site is my attempt to put all of that into something a recruiter could open in thirty seconds and understand not just what I can build, but who built it.
+    </p>
+
+    <p>
+      I don't know if it worked. But I know it's honest. And I think honest is the best possible place to start.
+    </p>
+
+  </article>
+
+  <!-- ===================== PREV / NEXT ===================== -->
+  <nav class="blog-nav" aria-label="blog navigation">
+    <a href="year3.html" class="blog-nav-card">
+      <p class="blog-nav-dir">← Previous post</p>
+      <p class="blog-nav-title">The year I stopped being afraid of the backend</p>
+    </a>
+    <!-- No next post — this is the final one -->
+    <div class="blog-nav-empty"></div>
+  </nav>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="blog-footer">
+    <a href="../index.html">← Back to Chapters</a>
+    <span>Naman Kaur · 2025</span>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // Navbar scroll shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function () {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+
+      // Reading progress bar
+      const progress   = document.getElementById('readingProgress');
+      const scrolled   = window.scrollY;
+      const scrollable = document.body.scrollHeight - window.innerHeight;
+      progress.style.width = ((scrolled / scrollable) * 100) + '%';
+    });
+
+    // Mobile hamburger
+    const hamburger  = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function () {
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('.mobile-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
