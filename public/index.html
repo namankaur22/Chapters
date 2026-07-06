@@ -77,7 +77,7 @@
       <div class="timeline-connector"></div>
       <div class="year-node" onclick="selectYear(3)">
         <div class="year-dot">Y4</div>
-        <span class="year-label">The full picture</span>
+        <span class="year-label">The Full Picture</span>
       </div>
     </div>
 
@@ -85,10 +85,6 @@
       <h3 class="year-detail-title" id="yearTitle"></h3>
       <div class="year-tags" id="yearTags"></div>
       <p class="year-detail-text" id="yearText"></p>
-      <!-- "Read this year in depth" button scrolls to the semester section -->
-      <a href="#semesters" class="btn-outline" id="yearReadMore">
-        Read Year 1 in depth <i class="ti ti-arrow-down"></i>
-      </a>
     </div>
   </section>
 
@@ -110,289 +106,101 @@
     <!-- Each item has data-year so JS can show/hide by year.
          Replace the placeholder divs with real <img> tags once
          you have photos. The structure stays the same. -->
-    <div class="gallery-grid" id="galleryGrid">
+<div class="gallery-grid" id="galleryGrid">
 
-      <div class="g-item" data-year="y1" onclick="openLightbox(0)">
-        <div class="g-thumb" style="background:#EAF3DE;">
-          <i class="ti ti-photo"></i>
-          <!-- swap this whole line for: <img src="photos/orientation.jpg" alt="Orientation day" /> -->
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Orientation Day</span>
-          <span class="g-overlay-year">Year 1</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y1" onclick="openLightbox(1)">
-        <div class="g-thumb" style="background:#F5F3EE;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">First Project</span>
-          <span class="g-overlay-year">Year 1</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y2" onclick="openLightbox(2)">
-        <div class="g-thumb" style="background:#EEEDFE;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Hackathon</span>
-          <span class="g-overlay-year">Year 2</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y2" onclick="openLightbox(3)">
-        <div class="g-thumb" style="background:#FAEEDA;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Tech Fest</span>
-          <span class="g-overlay-year">Year 2</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y3" onclick="openLightbox(4)">
-        <div class="g-thumb" style="background:#FAECE7;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Workshop</span>
-          <span class="g-overlay-year">Year 3</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y3" onclick="openLightbox(5)">
-        <div class="g-thumb" style="background:#E1F5EE;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Team Project</span>
-          <span class="g-overlay-year">Year 3</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y4" onclick="openLightbox(6)">
-        <div class="g-thumb" style="background:#FBEAF0;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Final Year</span>
-          <span class="g-overlay-year">Year 4</span>
-        </div>
-      </div>
-
-      <div class="g-item" data-year="y4" onclick="openLightbox(7)">
-        <div class="g-thumb" style="background:#EAF3DE;">
-          <i class="ti ti-photo"></i>
-        </div>
-        <div class="g-overlay">
-          <span class="g-overlay-title">Demo Day</span>
-          <span class="g-overlay-year">Year 4</span>
-        </div>
-      </div>
-
+  <div class="g-item" data-year="y1" onclick="openLightbox(0)">
+    <div class="g-thumb">
+      <img src="photos/y11.jpg" alt="Hostel Family" />
     </div>
-  </section>
-
-  <!-- Lightbox overlay — hidden until a gallery item is clicked -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">
-      <i class="ti ti-x"></i>
-    </button>
-    <button class="lightbox-prev" onclick="lightboxNav(event, -1)">
-      <i class="ti ti-chevron-left"></i>
-    </button>
-    <div class="lightbox-content" id="lightboxContent">
-      <!-- photo + caption injected by JS -->
+    <div class="g-overlay">
+      <span class="g-overlay-title">Hostel Family</span>
+      <span class="g-overlay-year">Year 1</span>
     </div>
-    <button class="lightbox-next" onclick="lightboxNav(event, 1)">
-      <i class="ti ti-chevron-right"></i>
-    </button>
   </div>
 
-  <!-- ===================== YEAR IN DEPTH (semesters) ===================== -->
-  <section class="reveal-section" id="semesters">
-    <div class="section-header">
-      <span class="section-label">Year in depth</span>
-      <div class="section-line"></div>
-      <!-- Year tabs to switch which year's semesters you're reading -->
-      <div class="sem-year-tabs">
-        <button class="sem-tab active" onclick="switchSemYear(this, 'y1')">Y1</button>
-        <button class="sem-tab" onclick="switchSemYear(this, 'y2')">Y2</button>
-        <button class="sem-tab" onclick="switchSemYear(this, 'y3')">Y3</button>
-        <button class="sem-tab" onclick="switchSemYear(this, 'y4')">Y4</button>
-      </div>
+  <div class="g-item" data-year="y1" onclick="openLightbox(1)">
+    <div class="g-thumb">
+      <img src="photos/y12.jpg" alt="DASA" />
     </div>
-
-    <!-- Year 1 semesters -->
-    <div class="sem-year-block active" data-sem-year="y1">
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 1</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">My first semester was a mix of excitement and confusion. Data structures felt abstract, but building a simple calculator in C++ clicked something in my brain.</p>
-          <div class="sem-photos">
-            <!-- Replace placeholders with <img src="..." /> when you have photos -->
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>C++ basics, logic building, and that asking for help is not weakness — it's the fastest way to grow.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 2</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">Discovered HTML and CSS. Built my first webpage — it was ugly, but it was mine. Something shifted when I saw code become something visible on screen.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>HTML, CSS, and the importance of just building things — even broken ones.</p>
-          </div>
-        </div>
-      </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">DASA</span>
+      <span class="g-overlay-year">Year 1</span>
     </div>
+  </div>
 
-    <!-- Year 2 semesters (hidden by default) -->
-    <div class="sem-year-block" data-sem-year="y2">
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 3</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">JavaScript entered the picture. DOM manipulation, events, the console — I spent more hours in DevTools than in class.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>JavaScript fundamentals, event handling, and why the browser console is your best friend.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 4</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">Participated in my first hackathon. We didn't win, but we shipped something in 24 hours. That feeling was addictive.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>React basics, working under pressure, and that done beats perfect every single time.</p>
-          </div>
-        </div>
-      </div>
+  <div class="g-item" data-year="y2" onclick="openLightbox(2)">
+    <div class="g-thumb">
+      <img src="photos/y21.jpeg" alt="My Birthday" />
     </div>
-
-    <!-- Year 3 semesters -->
-    <div class="sem-year-block" data-sem-year="y3">
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 5</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">First internship. Real codebase, real deadlines, real imposter syndrome. Also — real growth. I learned more in three months than in a full semester.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>Node.js, REST APIs, Git workflow in a team, and how to ask good questions.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 6</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">DSA clicked this semester. I finally understood why it matters — not for interviews, but for thinking clearly about problems.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>Data structures, algorithms, databases, and how to think before you code.</p>
-          </div>
-        </div>
-      </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">My Birthday</span>
+      <span class="g-overlay-year">Year 2</span>
     </div>
+  </div>
 
-    <!-- Year 4 semesters -->
-    <div class="sem-year-block" data-sem-year="y4">
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 7</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">Started the final year project. Spent the first month arguing about what to build. Spent the next two months actually building it. No regrets.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>System design, fullstack architecture, and how to scope a project realistically.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="sem-accordion">
-        <div class="sem-header" onclick="toggleAccordion(this)">
-          <span class="sem-title">Semester 8</span>
-          <i class="ti ti-chevron-down sem-icon"></i>
-        </div>
-        <div class="sem-body">
-          <p class="sem-text">Built this website. Presented the final project. Gave my last exam. Four years, eight semesters, one person who is not at all the same as the one who walked in.</p>
-          <div class="sem-photos">
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-            <div class="sem-photo-placeholder"><i class="ti ti-photo"></i></div>
-          </div>
-          <div class="learnings-box">
-            <p class="learnings-title">What I learned</p>
-            <p>Deployment, documentation, and that the most important skill is knowing how to keep learning.</p>
-          </div>
-        </div>
-      </div>
+  <div class="g-item" data-year="y2" onclick="openLightbox(3)">
+    <div class="g-thumb">
+      <img src="photos/y22.jpg" alt="My Best Friend" />
     </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">My Best Friend</span>
+      <span class="g-overlay-year">Year 2</span>
+    </div>
+  </div>
 
-  </section>
+  <div class="g-item" data-year="y3" onclick="openLightbox(4)">
+    <div class="g-thumb">
+      <img src="photos/y31.jpeg" alt="Team Meetings" />
+    </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">Team Meetings</span>
+      <span class="g-overlay-year">Year 3</span>
+    </div>
+  </div>
 
+  <div class="g-item" data-year="y3" onclick="openLightbox(5)">
+    <div class="g-thumb">
+      <img src="photos/y32.jpg" alt="Reunited" />
+    </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">Reunited</span>
+      <span class="g-overlay-year">Year 3</span>
+    </div>
+  </div>
+
+  <div class="g-item" data-year="y4" onclick="openLightbox(6)">
+    <div class="g-thumb">
+      <img src="photos/y41.jpg" alt="Final Year" />
+    </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">Final Year</span>
+      <span class="g-overlay-year">Year 4</span>
+    </div>
+  </div>
+
+  <div class="g-item" data-year="y4" onclick="openLightbox(7)">
+    <div class="g-thumb">
+      <img src="photos/y42.jpg" alt="Demo Day" />
+    </div>
+    <div class="g-overlay">
+      <span class="g-overlay-title">Demo Day</span>
+      <span class="g-overlay-year">Year 4</span>
+    </div>
+  </div>
+</div>
+</section> 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">
+    <i class="ti ti-x"></i>
+  </button>
+  <button class="lightbox-prev" onclick="lightboxNav(event, -1)">
+    <i class="ti ti-chevron-left"></i>
+  </button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+  <button class="lightbox-next" onclick="lightboxNav(event, 1)">
+    <i class="ti ti-chevron-right"></i>
+  </button>
+</div>
   <!-- ===================== BLOG ===================== -->
   <section class="reveal-section" id="blog">
     <div class="section-header">
@@ -410,10 +218,10 @@
         </div>
         <div class="blog-card-bottom">
           <span class="blog-meta">
-            <i class="ti ti-calendar"></i> 2023-24 &nbsp;·&nbsp;
+            <i class="ti ti-calendar"></i> 2023-24  &nbsp;·&nbsp;
             <i class="ti ti-clock"></i> 6 min
           </span>
-          <a href="year1.html" class="blog-read-link">
+          <a href="blog/year1.html" class="blog-read-link">
             Read <i class="ti ti-arrow-right"></i>
           </a>
         </div>
@@ -422,15 +230,15 @@
       <article class="blog-card">
         <div class="blog-card-top">
           <span class="blog-year-tag">Year 2</span>
-          <h3 class="blog-title">How I went from copying tutorials to building real things</h3>
-          <p class="blog-excerpt">The turning point wasn't a course. It was a bug I couldn't fix for three days.</p>
+          <h3 class="blog-title">A Place That Quietly Changed Me</h3>
+          <p class="blog-excerpt">Somewhere between late-night meetings, impossible deadlines, and unforgettable people, I quietly found the version of myself I'd been searching for.</p>
         </div>
         <div class="blog-card-bottom">
           <span class="blog-meta">
-            <i class="ti ti-calendar"></i> Aug 2022 &nbsp;·&nbsp;
-            <i class="ti ti-clock"></i> 6 min
+            <i class="ti ti-calendar"></i> Aug-Nov 2024 &nbsp;·&nbsp;
+            <i class="ti ti-clock"></i> 10 min
           </span>
-          <a href="year2.html" class="blog-read-link">
+          <a href="blog/year2.html" class="blog-read-link">
             Read <i class="ti ti-arrow-right"></i>
           </a>
         </div>
@@ -439,15 +247,15 @@
       <article class="blog-card">
         <div class="blog-card-top">
           <span class="blog-year-tag">Year 3</span>
-          <h3 class="blog-title">The year I stopped being afraid of the backend</h3>
-          <p class="blog-excerpt">APIs felt like magic until I built one. Then they felt like plumbing — useful, unglamorous, essential.</p>
+          <h3 class="blog-title">The year I began finding myself again.</h3>
+          <p class="blog-excerpt">My third year wasn't about doing more - it was about becoming better, one choice, one challenge, and one lesson at a time.</p>
         </div>
         <div class="blog-card-bottom">
           <span class="blog-meta">
-            <i class="ti ti-calendar"></i> Mar 2023 &nbsp;·&nbsp;
-            <i class="ti ti-clock"></i> 5 min
+            <i class="ti ti-calendar"></i> September 2025 &nbsp;·&nbsp;
+            <i class="ti ti-clock"></i> 6 min
           </span>
-          <a href="year3.html" class="blog-read-link">
+          <a href="blog/year3.html" class="blog-read-link">
             Read <i class="ti ti-arrow-right"></i>
           </a>
         </div>
@@ -456,15 +264,15 @@
       <article class="blog-card">
         <div class="blog-card-top">
           <span class="blog-year-tag">Year 4</span>
-          <h3 class="blog-title">Building this site — what I learned about myself</h3>
-          <p class="blog-excerpt">Every design decision felt personal. Because it was.</p>
+          <h3 class="blog-title">Coming Soon..</h3>
+          <p class="blog-excerpt">Every ending is a beginning.</p>
         </div>
         <div class="blog-card-bottom">
           <span class="blog-meta">
-            <i class="ti ti-calendar"></i> May 2025 &nbsp;·&nbsp;
+            <i class="ti ti-calendar"></i> August 2026 &nbsp;·&nbsp;
             <i class="ti ti-clock"></i> 7 min
           </span>
-          <a href="year4.html" class="blog-read-link">
+          <a href="blog/year4.html" class="blog-read-link">
             Read <i class="ti ti-arrow-right"></i>
           </a>
         </div>
@@ -480,7 +288,7 @@
       <div class="connect-left">
         <p class="connect-eyebrow">That's my story — so far.</p>
         <h2 class="connect-heading">Let's build something together.</h2>
-        <p class="connect-sub">Open to opportunities, collabs, or just a good conversation about tech.</p>
+        <p class="connect-sub">Open to opportunities, collabs, or just a good conversation.</p>
         <a href="mailto:naman@email.com" class="btn-primary">
           <i class="ti ti-mail"></i> Say hello
         </a>
@@ -491,33 +299,33 @@
         <div class="skills-block">
           <p class="connect-block-label">Skills</p>
           <div class="skill-row">
-            <div class="skill-top"><span>JavaScript</span><span>85%</span></div>
+            <div class="skill-top"><span>Curious to a fault</span><span>85%</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
           </div>
           <div class="skill-row">
-            <div class="skill-top"><span>React</span><span>75%</span></div>
+            <div class="skill-top"><span>Chaos Manager</span><span>85%</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
           </div>
           <div class="skill-row">
-            <div class="skill-top"><span>Node.js</span><span>65%</span></div>
+            <div class="skill-top"><span>People Person</span><span>95%</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65"></div></div>
           </div>
           <div class="skill-row">
-            <div class="skill-top"><span>CSS / Design</span><span>80%</span></div>
+            <div class="skill-top"><span>Last Minute Magic</span><span>80%</span></div>
             <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
         </div>
 
         <div class="links-block">
           <p class="connect-block-label">Find me</p>
-          <a href="https://github.com" target="_blank" class="connect-link">
-            <i class="ti ti-brand-github"></i> github.com/namankaur
+          <a href="https://github.com/namankaur22" target="_blank" class="connect-link">
+            <i class="ti ti-brand-github"></i> github.com/namankaur22
           </a>
-          <a href="https://linkedin.com" target="_blank" class="connect-link">
-            <i class="ti ti-brand-linkedin"></i> linkedin.com/in/namankaur
+          <a href="https://www.linkedin.com/in/naman-kaur-310829297/" target="_blank" class="connect-link">
+            <i class="ti ti-brand-linkedin"></i> linkedin.com/in/naman-kaur-310829297
           </a>
           <a href="mailto:naman@email.com" class="connect-link">
-            <i class="ti ti-mail"></i> naman@email.com
+            <i class="ti ti-mail"></i> namankaur1122@gmail.com
           </a>
           <a href="resume.pdf" target="_blank" class="connect-link">
             <i class="ti ti-file-cv"></i> Download résumé
@@ -528,7 +336,7 @@
     </div>
 
     <div class="footer-bar">
-      <span>Built by Naman Kaur · 2025</span>
+      <span>Built by Naman Kaur · 2026</span>
       <span>Made with HTML, CSS &amp; JavaScript</span>
     </div>
   </section>

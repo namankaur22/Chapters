@@ -171,14 +171,14 @@ if (document.getElementById('yearTitle')) selectYear(0);
    5. GALLERY FILTER + LIGHTBOX
 ============================================================ */
 const galleryData = [
-  { title: 'Orientation Day',  year: 'Year 1', src: 'photos/orientation.jpg'  },
-  { title: 'First Project',    year: 'Year 1', src: 'photos/firstproject.jpg' },
-  { title: 'Hackathon',        year: 'Year 2', src: 'photos/hackathon.jpg'    },
-  { title: 'Tech Fest',        year: 'Year 2', src: 'photos/techfest.jpg'     },
-  { title: 'Workshop',         year: 'Year 3', src: 'photos/workshop.jpg'     },
-  { title: 'Team Project',     year: 'Year 3', src: 'photos/team.jpg'         },
-  { title: 'Final Year',       year: 'Year 4', src: 'photos/finalyear.jpg'    },
-  { title: 'Demo Day',         year: 'Year 4', src: 'photos/demoday.jpg'      }
+  { title: 'Hostel Family',   year: 'Year 1', src: 'photos/y11.jpg'  },
+  { title: 'DASA',            year: 'Year 1', src: 'photos/y12.jpg'  },
+  { title: 'My Birthday',     year: 'Year 2', src: 'photos/y21.jpeg' },
+  { title: 'My Best Friend',  year: 'Year 2', src: 'photos/y22.jpg'  },
+  { title: 'Team Meetings',   year: 'Year 3', src: 'photos/y31.jpeg' },
+  { title: 'Reunited',        year: 'Year 3', src: 'photos/y32.jpg'  },
+  { title: 'Final Year',      year: 'Year 4', src: 'photos/y41.jpg'  },
+  { title: 'Demo Day',        year: 'Year 4', src: 'photos/y42.jpg'  },
 ];
 
 let currentLightboxIndex = 0;
@@ -216,12 +216,7 @@ function renderLightbox(index) {
   const data    = galleryData[index];
   const content = document.getElementById('lightboxContent');
   content.innerHTML = `
-    <div class="lightbox-placeholder">
-      <i class="ti ti-photo"></i>
-      <p style="color:#fff;margin-top:12px;opacity:0.6;font-size:13px;">
-        Replace with: &lt;img src="${data.src}" /&gt;
-      </p>
-    </div>
+    <img src="${data.src}" alt="${data.title}" />
     <p class="lightbox-caption">${data.title} · ${data.year}</p>`;
 }
 
@@ -242,37 +237,6 @@ document.addEventListener('keydown', function (e) {
 document.querySelectorAll('.g-item').forEach(function (item, i) {
   setTimeout(function () { item.classList.add('g-visible'); }, i * 80);
 });
-
-/* ============================================================
-   6. SEMESTER ACCORDION
-============================================================ */
-function toggleAccordion(header) {
-  const body = header.nextElementSibling;
-  const icon = header.querySelector('.sem-icon');
-  const isOpen = body.classList.contains('open');
-
-  // close all open accordions in the same block first
-  const block = header.closest('.sem-year-block');
-  block.querySelectorAll('.sem-body').forEach(b => b.classList.remove('open'));
-  block.querySelectorAll('.sem-icon').forEach(ic => ic.classList.remove('open'));
-
-  // if it wasn't already open, open it
-  if (!isOpen) {
-    body.classList.add('open');
-    icon.classList.add('open');
-  }
-}
-
-/* ============================================================
-   7. SEMESTER YEAR TABS
-============================================================ */
-function switchSemYear(btn, year) {
-  document.querySelectorAll('.sem-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.sem-year-block').forEach(function (block) {
-    block.classList.toggle('active', block.dataset.semYear === year);
-  });
-}
 
 /* ============================================================
    8. SCROLL REVEAL (IntersectionObserver)
