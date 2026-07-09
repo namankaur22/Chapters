@@ -17,7 +17,7 @@
 
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar" id="navbar">
-    <a href="public/index.html" class="nav-logo">Chapters ✦</a>
+    <a href="../index.html" class="nav-logo">Chapters ✦</a>
     <div class="nav-links">
       <a href="../index.html#hero"     class="nav-link">home</a>
       <a href="../index.html#timeline" class="nav-link">timeline</a>
@@ -96,7 +96,36 @@
         mobileMenu.classList.remove('open');
       });
     });
-  </script>
+  /* ============================================================
+   CURSOR TRAIL
+   Creates a falling leaf on every mouse move
+============================================================ */
+const leafColors = ['#97C459', '#639922', '#3B6D11', '#C0DD97', '#EF9F27'];
 
+document.addEventListener('mousemove', function (e) {
+  const leaf = document.createElement('div');
+  leaf.className = 'cursor-leaf';
+
+  // random colour from our green/amber palette
+  leaf.style.background = leafColors[Math.floor(Math.random() * leafColors.length)];
+
+  // place it at cursor position
+  leaf.style.left = e.clientX + 'px';
+  leaf.style.top  = e.clientY + 'px';
+
+  document.body.appendChild(leaf);
+
+  // trigger the fall animation on next frame
+  requestAnimationFrame(function () {
+    leaf.style.transform = 'translate('
+      + (Math.random() * 40 - 20) + 'px, '
+      + (30 + Math.random() * 20) + 'px) rotate(180deg)';
+    leaf.style.opacity = '0';
+  });
+
+  // remove from DOM after animation completes
+  setTimeout(function () { leaf.remove(); }, 620);
+});
+</script>
 </body>
 </html>

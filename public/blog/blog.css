@@ -436,3 +436,16 @@ h1, h2, h3, h4 {
     padding: 16px 24px;
   }
 }
+
+/* ============================================================
+   CURSOR TRAIL
+============================================================ */
+.cursor-leaf {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50% 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
