@@ -173,9 +173,9 @@ if (document.getElementById('yearTitle')) selectYear(0);
 const galleryData = [
   { title: 'Hostel Family',   year: 'Year 1', src: 'photos/y11.jpg'  },
   { title: 'DASA',            year: 'Year 1', src: 'photos/y12.jpg'  },
-  { title: 'My Birthday',     year: 'Year 2', src: 'photos/y21.jpeg' },
+  { title: 'My Birthday',     year: 'Year 2', src: 'photos/y21.jpg' },
   { title: 'My Best Friend',  year: 'Year 2', src: 'photos/y22.jpg'  },
-  { title: 'Team Meetings',   year: 'Year 3', src: 'photos/y31.jpeg' },
+  { title: 'Team Meetings',   year: 'Year 3', src: 'photos/y31.jpg' },
   { title: 'Reunited',        year: 'Year 3', src: 'photos/y32.jpg'  },
   { title: 'Final Year',      year: 'Year 4', src: 'photos/y41.jpg'  },
   { title: 'Demo Day',        year: 'Year 4', src: 'photos/y42.jpg'  },

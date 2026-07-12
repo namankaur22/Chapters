@@ -103,9 +103,6 @@
       <button class="g-filter" onclick="filterGallery(this, 'y4')">year 4</button>
     </div>
 
-    <!-- Each item has data-year so JS can show/hide by year.
-         Replace the placeholder divs with real <img> tags once
-         you have photos. The structure stays the same. -->
 <div class="gallery-grid" id="galleryGrid">
 
   <div class="g-item" data-year="y1" onclick="openLightbox(0)">
@@ -187,7 +184,14 @@
       <span class="g-overlay-year">Year 4</span>
     </div>
   </div>
+
 </div>
+    <div class="gallery-more">
+      <a href="gallery.html" class="btn-gallery-more">
+        <i class="ti ti-photos"></i> View full gallery
+      </a>
+    </div>
+    
 </section> 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">
@@ -201,6 +205,7 @@
     <i class="ti ti-chevron-right"></i>
   </button>
 </div>
+
   <!-- ===================== BLOG ===================== -->
   <section class="reveal-section" id="blog">
     <div class="section-header">
@@ -226,6 +231,22 @@
           </a>
         </div>
       </article>
+            <article class="blog-card">
+        <div class="blog-card-top">
+          <span class="blog-year-tag">Year 1</span>
+          <h3 class="blog-title">Somethings are never lost.</h3>
+          <p class="blog-excerpt">Some endings are new beginnings.</p>
+        </div>
+        <div class="blog-card-bottom">
+          <span class="blog-meta">
+            <i class="ti ti-calendar"></i> April 2024 &nbsp;·&nbsp;
+            <i class="ti ti-clock"></i> 7 min
+          </span>
+          <a href="blog/gabru.html" class="blog-read-link">
+            Read <i class="ti ti-arrow-right"></i>
+          </a>
+        </div>
+      </article>
 
       <article class="blog-card">
         <div class="blog-card-top">
@@ -243,7 +264,22 @@
           </a>
         </div>
       </article>
-
+      <article class="blog-card">
+        <div class="blog-card-top">
+          <span class="blog-year-tag">Year 2</span>
+          <h3 class="blog-title">The Best Internship Ever.</h3>
+          <p class="blog-excerpt">Between deadlines, events and chaos, I discovered the version of myself I never knew existed.</p>
+        </div>
+        <div class="blog-card-bottom">
+          <span class="blog-meta">
+            <i class="ti ti-calendar"></i> August 2024 &nbsp;·&nbsp;
+            <i class="ti ti-clock"></i> 6 min
+          </span>
+          <a href="blog/redbull.html" class="blog-read-link">
+            Read <i class="ti ti-arrow-right"></i>
+          </a>
+        </div>
+      </article>
       <article class="blog-card">
         <div class="blog-card-top">
           <span class="blog-year-tag">Year 3</span>
@@ -264,13 +300,13 @@
       <article class="blog-card">
         <div class="blog-card-top">
           <span class="blog-year-tag">Year 4</span>
-          <h3 class="blog-title">Coming Soon..</h3>
-          <p class="blog-excerpt">Every ending is a beginning.</p>
+          <h3 class="blog-title">The End?></h3>
+          <p class="blog-excerpt">Coming Soon. </p>
         </div>
         <div class="blog-card-bottom">
           <span class="blog-meta">
-            <i class="ti ti-calendar"></i> August 2026 &nbsp;·&nbsp;
-            <i class="ti ti-clock"></i> 7 min
+            <i class="ti ti-calendar"></i> 2026 &nbsp;·&nbsp;
+            <i class="ti ti-clock"></i> 
           </span>
           <a href="blog/year4.html" class="blog-read-link">
             Read <i class="ti ti-arrow-right"></i>
@@ -304,11 +340,11 @@
           </div>
           <div class="skill-row">
             <div class="skill-top"><span>Chaos Manager</span><span>85%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span>People Person</span><span>95%</span></div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span>Last Minute Magic</span><span>80%</span></div>
